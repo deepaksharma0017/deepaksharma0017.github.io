@@ -5,148 +5,219 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deepak Sharma | Cloud & AI Architect</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* {margin:0;padding:0;box-sizing:border-box;}
 body {
   font-family: 'Inter', sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
-  line-height: 1.6;
+  background:#0f172a;
+  color:#e2e8f0;
+  scroll-behavior:smooth;
 }
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+nav {
+  position:sticky;
+  top:0;
+  background:#0f172a;
+  padding:20px 0;
+  border-bottom:1px solid #1e293b;
+  z-index:1000;
+}
+nav ul {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  list-style:none;
+}
+nav a {
+  text-decoration:none;
+  color:#94a3b8;
+  font-weight:500;
+  transition:.3s;
+}
+nav a:hover {
+  color:#38bdf8;
 }
 header {
-  padding: 120px 0;
-  text-align: center;
+  padding:120px 0;
+  text-align:center;
 }
 header h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size:3rem;
 }
 header p {
-  font-size: 1.3rem;
-  margin-top: 15px;
-  color: #94a3b8;
+  margin-top:15px;
+  color:#94a3b8;
 }
 .btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 30px;
-  background: linear-gradient(135deg, #38bdf8, #6366f1);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-.btn:hover {
-  opacity: 0.85;
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 28px;
+  border-radius:8px;
+  background:linear-gradient(135deg,#38bdf8,#6366f1);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
 }
 section {
-  padding: 80px 0;
+  padding:80px 0;
 }
 h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  text-align: center;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  text-align:center;
+  margin-bottom:40px;
 }
 .card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  transition: 0.3s ease;
+  background:#1e293b;
+  padding:25px;
+  border-radius:12px;
+  transition:.3s;
 }
 .card:hover {
-  transform: translateY(-5px);
-  background: #243447;
+  transform:translateY(-5px);
 }
-.card h3 {
-  margin-bottom: 15px;
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
+
+/* Skill Bars */
+.skill {
+  margin-bottom:20px;
+}
+.skill-name {
+  margin-bottom:8px;
+}
+.skill-bar {
+  height:8px;
+  background:#334155;
+  border-radius:10px;
+  overflow:hidden;
+}
+.skill-progress {
+  height:8px;
+  width:0;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  transition:2s ease;
+}
+
+/* Gallery */
+.gallery img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* Footer */
 footer {
-  text-align: center;
-  padding: 40px 0;
-  color: #64748b;
-  font-size: 0.9rem;
+  text-align:center;
+  padding:40px 0;
+  color:#64748b;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#gallery">Architecture</a></li>
+  </ul>
+</nav>
+
 <header>
   <div class="container">
     <h1>Deepak Sharma</h1>
     <p>Cloud Infrastructure & AI Architect</p>
-    <a href="mailto:your-email@example.com" class="btn">Contact Me</a>
+    <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+    <br>
+    <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" style="color:#38bdf8;margin-top:15px;display:inline-block;">
+      Connect on LinkedIn
+    </a>
   </div>
 </header>
 
-<section>
+<section id="about">
   <div class="container">
     <h2>About Me</h2>
     <div class="card">
-      <p>
-        Highly accomplished Cloud Solution Architect with 17+ years of experience 
-        designing scalable, secure, and cost-optimized enterprise infrastructure. 
-        Specialized in AWS, GCP, Kubernetes, AI Agents, and automation platforms.
-      </p>
+      17+ years designing enterprise cloud platforms, AI-driven systems, and scalable Kubernetes architectures.
     </div>
   </div>
 </section>
 
-<section>
+<section id="skills">
   <div class="container">
-    <h2>Core Expertise</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Cloud Platforms</h3>
-        <p>AWS, GCP, Multi-Region Architecture, HA Design</p>
-      </div>
-      <div class="card">
-        <h3>DevOps & IaC</h3>
-        <p>Terraform, CI/CD, GitOps, Infrastructure Automation</p>
-      </div>
-      <div class="card">
-        <h3>Containerization</h3>
-        <p>Kubernetes, Docker, Microservices Architecture</p>
-      </div>
-      <div class="card">
-        <h3>AI & MLOps</h3>
-        <p>AI Agents, LLM Integration, MLOps Pipelines</p>
-      </div>
+    <h2>Technical Expertise</h2>
+
+    <div class="skill">
+      <div class="skill-name">AWS / GCP</div>
+      <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
     </div>
+
+    <div class="skill">
+      <div class="skill-name">Kubernetes</div>
+      <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">Terraform / IaC</div>
+      <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">AI & MLOps</div>
+      <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+    </div>
+
   </div>
 </section>
 
-<section>
+<section id="projects">
   <div class="container">
-    <h2>Selected Achievements</h2>
+    <h2>Case Studies</h2>
     <div class="grid">
       <div class="card">
         <h3>Enterprise Cloud Migration</h3>
-        <p>Migrated 300+ workloads reducing infrastructure cost by 28% and improving reliability.</p>
+        <p>300+ workloads migrated, 28% cost reduction, multi-region HA design.</p>
       </div>
       <div class="card">
         <h3>AI Automation Platform</h3>
-        <p>Designed AI-driven automation reducing operational overhead by 40%.</p>
+        <p>AI agent system reducing operational overhead by 40%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <h2>Insights & Articles</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Designing AI Agent Architectures</h3>
+        <p>Principles behind scalable autonomous systems.</p>
       </div>
       <div class="card">
-        <h3>Cloud Governance</h3>
-        <p>Implemented cost governance strategy managing $5M+ annual cloud budget.</p>
+        <h3>Cloud Cost Optimization Strategy</h3>
+        <p>Governance patterns for multi-cloud environments.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2>Architecture Gallery</h2>
+    <div class="grid gallery">
+      <img src="architecture1.png" alt="Architecture Diagram 1">
+      <img src="architecture2.png" alt="Architecture Diagram 2">
     </div>
   </div>
 </section>
@@ -154,6 +225,17 @@ footer {
 <footer>
   © 2026 Deepak Sharma | Cloud & AI Architect
 </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+  document.querySelectorAll(".skill-progress").forEach(function(bar) {
+    var rect = bar.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      bar.style.width = bar.getAttribute("data-width");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
