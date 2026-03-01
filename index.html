@@ -1,60 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Deepak Sharma | Cloud & AI Architect</title>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 60px;
-    }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 20px;
-      color: #cbd5e1;
-    }
-    .section {
-      padding: 40px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin-top: 20px;
-      background: #38bdf8;
-      color: black;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deepak Sharma | Cloud & AI Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+header {
+  padding: 120px 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+header p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #94a3b8;
+}
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+section {
+  padding: 80px 0;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  background: #243447;
+}
+.card h3 {
+  margin-bottom: 15px;
+}
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Deepak Sharma</h1>
-  <p>Cloud Infrastructure & AI Architect</p>
-  <a href="#" class="btn">Contact Me</a>
+  <div class="container">
+    <h1>Deepak Sharma</h1>
+    <p>Cloud Infrastructure & AI Architect</p>
+    <a href="mailto:your-email@example.com" class="btn">Contact Me</a>
+  </div>
 </header>
 
-<div class="section">
-  <h2>Skills</h2>
-  <p>GCP | AWS | Kubernetes | Terraform | AI Agents | MLOps</p>
-</div>
-  
-<div class="section">
-  <h2>About Me</h2>
-  <p>17+ years of experience designing and implementing enterprise cloud solutions.</p>
-</div>
+<section>
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        Highly accomplished Cloud Solution Architect with 17+ years of experience 
+        designing scalable, secure, and cost-optimized enterprise infrastructure. 
+        Specialized in AWS, GCP, Kubernetes, AI Agents, and automation platforms.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Core Expertise</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cloud Platforms</h3>
+        <p>AWS, GCP, Multi-Region Architecture, HA Design</p>
+      </div>
+      <div class="card">
+        <h3>DevOps & IaC</h3>
+        <p>Terraform, CI/CD, GitOps, Infrastructure Automation</p>
+      </div>
+      <div class="card">
+        <h3>Containerization</h3>
+        <p>Kubernetes, Docker, Microservices Architecture</p>
+      </div>
+      <div class="card">
+        <h3>AI & MLOps</h3>
+        <p>AI Agents, LLM Integration, MLOps Pipelines</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Selected Achievements</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Enterprise Cloud Migration</h3>
+        <p>Migrated 300+ workloads reducing infrastructure cost by 28% and improving reliability.</p>
+      </div>
+      <div class="card">
+        <h3>AI Automation Platform</h3>
+        <p>Designed AI-driven automation reducing operational overhead by 40%.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud Governance</h3>
+        <p>Implemented cost governance strategy managing $5M+ annual cloud budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Deepak Sharma | Cloud & AI Architect
+</footer>
 
 </body>
 </html>
