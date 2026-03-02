@@ -3,32 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>Deepak Sharma | Senior Cloud Solution Architect</title>
+<title>Deepak Sharma | Senior Cloud Solution Architect | Atlanta, GA</title>
+
+<!-- SEO Meta Tags (#15) -->
+<meta name="description" content="Senior Cloud Solution Architect with 18+ years experience. Expert in AWS, GCP, cloud security, Kubernetes, Terraform and FinOps. Based in Atlanta, GA.">
+<meta name="keywords" content="Cloud Architect, AWS, GCP, Kubernetes, Terraform, Cloud Security, FinOps, Atlanta, TCS, Senior Cloud Engineer">
+<meta name="author" content="Deepak Sharma">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / LinkedIn Rich Preview (#15) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deepaksharma0017.github.io/">
+<meta property="og:title" content="Deepak Sharma | Senior Cloud Solution Architect">
+<meta property="og:description" content="18+ years enterprise cloud experience. AWS & GCP migrations, security hardening, Kubernetes, Terraform. Fortune 500 clients. Based in Atlanta, GA.">
+<meta property="og:image" content="https://deepaksharma0017.github.io/og-image.png">
+<meta property="og:site_name" content="Deepak Sharma Portfolio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deepak Sharma | Senior Cloud Solution Architect">
+<meta name="twitter:description" content="18+ years enterprise cloud experience. AWS & GCP expert. Atlanta, GA.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- EmailJS (#16) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <style>
-:root{--bg:#05080f;--surface:#0b1120;--surface2:#0f1929;--border:rgba(99,179,237,0.12);--accent:#3b9eff;--accent2:#00d4aa;--accent3:#7c5cfc;--text:#e8edf5;--muted:#7a8fa8}
+/* ── THEME ── */
+:root{
+  --bg:#05080f;--surface:#0b1120;--surface2:#0f1929;
+  --border:rgba(99,179,237,0.12);--accent:#3b9eff;
+  --accent2:#00d4aa;--accent3:#7c5cfc;--text:#e8edf5;--muted:#7a8fa8;
+  --card-shadow:0 4px 24px rgba(0,0,0,0.4);
+}
+/* Light mode (#11) */
+body.light-mode{
+  --bg:#f0f4f8;--surface:#ffffff;--surface2:#e8edf5;
+  --border:rgba(59,130,246,0.15);--text:#0f172a;--muted:#64748b;
+  --card-shadow:0 4px 24px rgba(0,0,0,0.08);
+}
+body.light-mode body::before{background-image:linear-gradient(rgba(59,130,246,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.05) 1px,transparent 1px)}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:"Space Grotesk",sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{font-family:"Space Grotesk",sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background 0.3s,color 0.3s}
 body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(59,158,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(59,158,255,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 60px;background:rgba(5,8,15,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+/* ── STICKY RESUME CTA (#5) ── */
+.sticky-resume{position:fixed;bottom:28px;right:28px;z-index:200;display:flex;align-items:center;gap:10px;padding:14px 22px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:0.88rem;border-radius:50px;text-decoration:none;box-shadow:0 8px 32px rgba(59,158,255,0.4);transition:all 0.25s;animation:fadeUp 1s 0.8s ease both}
+.sticky-resume:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(59,158,255,0.55)}
+@media(max-width:768px){.sticky-resume{bottom:16px;right:16px;padding:12px 18px;font-size:0.82rem}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 60px;background:rgba(5,8,15,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background 0.3s}
+body.light-mode nav{background:rgba(240,244,248,0.95)}
 .nav-logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none;white-space:nowrap;letter-spacing:0.04em}
 .nav-logo span{color:var(--accent)}
-.nav-links{display:flex;gap:28px;list-style:none}
-.nav-links a{text-decoration:none;color:var(--muted);font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;white-space:nowrap}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:0.8rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;white-space:nowrap}
 .nav-links a:hover{color:var(--accent)}
+/* Dark/Light toggle (#11) */
+.theme-toggle{background:none;border:1px solid var(--border);border-radius:50px;padding:6px 12px;cursor:pointer;color:var(--muted);font-size:0.85rem;transition:all 0.2s;display:flex;align-items:center;gap:6px}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;background:rgba(5,8,15,0.98);border-bottom:1px solid var(--border);padding:20px 24px;z-index:99;flex-direction:column;gap:0}
+body.light-mode .mobile-menu{background:rgba(240,244,248,0.99)}
 .mobile-menu a{display:block;padding:14px 0;color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;border-bottom:1px solid var(--border);transition:color 0.2s}
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu a:hover{color:var(--accent)}
 .mobile-menu.open{display:flex}
 
-/* HERO */
+/* ── HERO ── */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:100px 60px 60px;overflow:hidden;z-index:1}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 .orb1{width:500px;height:500px;background:radial-gradient(circle,rgba(59,158,255,0.15) 0%,transparent 70%);top:-80px;right:-80px;animation:float1 8s ease-in-out infinite}
@@ -36,12 +84,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,20px)}}
 @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-15px)}}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;max-width:1280px;position:relative;z-index:2}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,158,255,0.1);border:1px solid rgba(59,158,255,0.25);color:var(--accent);font-family:"Space Mono",monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:24px;animation:fadeUp 0.6s ease both}
+
+/* Profile photo (#1) */
+.hero-left{display:flex;flex-direction:column}
+.hero-photo-row{display:flex;align-items:center;gap:24px;margin-bottom:24px;animation:fadeUp 0.6s ease both}
+.hero-photo{width:90px;height:90px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 6px rgba(59,158,255,0.12);object-fit:cover;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-photo-fallback{width:90px;height:90px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 6px rgba(59,158,255,0.12);background:linear-gradient(135deg,var(--accent),var(--accent3));display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-size:1.8rem;font-weight:700;color:#fff;flex-shrink:0}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,158,255,0.1);border:1px solid rgba(59,158,255,0.25);color:var(--accent);font-family:"Space Mono",monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px;animation:fadeUp 0.6s ease both}
 .hero-badge::before{content:"";width:6px;height:6px;background:var(--accent2);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.3)}}
-.hero-left h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.6rem,5vw,4.8rem);font-weight:700;line-height:1.0;letter-spacing:-0.03em;margin-bottom:20px;animation:fadeUp 0.6s 0.1s ease both}
+
+/* Availability badge (#2) */
+.availability-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.3);color:var(--accent2);font-family:"Space Mono",monospace;font-size:0.7rem;letter-spacing:0.08em;padding:5px 14px;border-radius:100px;margin-bottom:20px;animation:fadeUp 0.6s 0.05s ease both}
+.availability-badge::before{content:"";width:7px;height:7px;background:var(--accent2);border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
+
+.hero-left h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.4rem,4.5vw,4.5rem);font-weight:700;line-height:1.0;letter-spacing:-0.03em;margin-bottom:20px;animation:fadeUp 0.6s 0.1s ease both}
 .hero-left h1 .line2{display:block;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 50%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both;margin-top:32px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both;margin-top:28px}
 .hero-right{animation:fadeUp 0.6s 0.2s ease both}
 .hero-intro-label{font-family:"Space Mono",monospace;font-size:0.72rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
 .hero-sub{font-size:1.02rem;color:var(--muted);margin-bottom:28px;font-weight:300;line-height:1.75}
@@ -55,14 +116,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
-/* SECTIONS */
+/* ── SECTIONS ── */
 section{position:relative;z-index:1;padding:90px 60px}
 .section-label{font-family:"Space Mono",monospace;font-size:0.88rem;font-weight:400;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 .section-title{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:700;letter-spacing:-0.02em;margin-bottom:18px;line-height:1.1}
 .section-desc{color:var(--muted);font-size:1.15rem;max-width:600px;margin-bottom:54px;font-weight:300}
 .divider{width:50px;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:2px;margin-bottom:36px}
 
-/* METRICS */
+/* ── METRICS ── */
 .metrics-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden}
 .metric-card{background:var(--surface);padding:44px 28px;text-align:center;position:relative;overflow:hidden;transition:background 0.3s}
@@ -75,11 +136,20 @@ section{position:relative;z-index:1;padding:90px 60px}
 .metric-card:hover::before{opacity:1}
 .metric-number{font-family:"Space Mono",monospace;font-size:3.2rem;font-weight:700;letter-spacing:-0.03em;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;line-height:1;margin-bottom:8px}
 .metric-label{font-size:0.82rem;color:var(--muted);font-weight:400;text-transform:uppercase;letter-spacing:0.07em}
+/* Impact sub-label (#3) */
+.metric-impact{font-family:"Space Mono",monospace;font-size:0.68rem;color:var(--accent2);margin-top:6px;opacity:0.8}
 
-/* ABOUT */
+/* ── ABOUT ── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
 .about-text p{color:var(--muted);margin-bottom:18px;font-size:1rem;line-height:1.8}
 .about-text p strong{color:var(--text);font-weight:500}
+/* Currently working on (#14) */
+.working-on{background:var(--surface);border:1px solid rgba(0,212,170,0.25);border-radius:14px;padding:20px 24px;margin-top:24px}
+.working-on-title{font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--accent2);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.working-on-title::before{content:"";width:8px;height:8px;background:var(--accent2);border-radius:50%;animation:pulse 1.5s infinite}
+.working-on-items{display:flex;flex-direction:column;gap:8px}
+.working-on-item{font-size:0.88rem;color:var(--muted);display:flex;align-items:center;gap:10px}
+.working-on-item::before{content:"▸";color:var(--accent2);font-size:0.75rem;flex-shrink:0}
 .expertise-list{display:flex;flex-direction:column;gap:14px}
 .expertise-item{display:flex;align-items:center;gap:14px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;transition:all 0.25s}
 .expertise-item:hover{border-color:rgba(59,158,255,0.3);transform:translateX(5px);background:var(--surface2)}
@@ -92,17 +162,33 @@ section{position:relative;z-index:1;padding:90px 60px}
 .expertise-name{font-weight:600;font-size:0.92rem;margin-bottom:2px}
 .expertise-detail{font-size:0.8rem;color:var(--muted)}
 
-/* SKILLS */
+/* ── SKILLS WITH PROFICIENCY (#13) ── */
 .skills-section{background:var(--surface);border-top:1px solid var(--border)}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .skill-category{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.3s}
 .skill-category:hover{border-color:rgba(59,158,255,0.3);transform:translateY(-3px)}
 .skill-cat-icon{font-size:1.8rem;margin-bottom:14px;display:block}
 .skill-cat-title{font-family:"Space Grotesk",sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:16px;color:var(--text)}
-.skill-pills{display:flex;flex-wrap:wrap;gap:7px}
+.skill-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
 .skill-pill{padding:4px 11px;border-radius:100px;font-size:0.75rem;font-weight:500;background:var(--surface2);color:var(--muted);border:1px solid var(--border)}
+/* Proficiency bars (#13) */
+.proficiency-bars{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.prof-row{display:flex;align-items:center;gap:10px;font-size:0.75rem}
+.prof-label{color:var(--muted);width:90px;flex-shrink:0;font-family:"Space Mono",monospace;font-size:0.68rem}
+.prof-bar-bg{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.prof-bar{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;transition:width 1.2s ease}
+.prof-level{color:var(--accent2);font-family:"Space Mono",monospace;font-size:0.65rem;width:52px;text-align:right;flex-shrink:0}
 
-/* CERTIFICATIONS */
+/* ── TECH LOGOS (#4) ── */
+.tech-logos-section{border-top:1px solid var(--border);padding:60px}
+.tech-logos-title{font-family:"Space Mono",monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:36px}
+.tech-logos-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:center}
+.tech-logo-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;transition:all 0.25s;min-width:90px}
+.tech-logo-item:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(59,158,255,0.1)}
+.tech-logo-icon{font-size:1.8rem;line-height:1}
+.tech-logo-name{font-size:0.7rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;text-align:center}
+
+/* ── CERTIFICATIONS ── */
 .certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .cert-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px 20px;text-align:center;transition:all 0.3s}
 .cert-card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 14px 36px rgba(59,158,255,0.12)}
@@ -110,10 +196,19 @@ section{position:relative;z-index:1;padding:90px 60px}
 .cert-name{font-family:"Space Grotesk",sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:6px;color:var(--text);line-height:1.3}
 .cert-issuer{font-family:"Space Mono",monospace;font-size:0.7rem;color:var(--accent);letter-spacing:0.06em}
 
-/* CASE STUDIES */
-.cases-section{background:var(--surface);border-top:1px solid var(--border)}
+/* ── INDUSTRIES (#7) ── */
+.industries-section{background:var(--surface);border-top:1px solid var(--border)}
+.industries-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.industry-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:28px 20px;text-align:center;transition:all 0.3s}
+.industry-card:hover{transform:translateY(-4px);border-color:rgba(59,158,255,0.3);box-shadow:var(--card-shadow)}
+.industry-icon{font-size:2.4rem;margin-bottom:14px;display:block}
+.industry-name{font-family:"Space Grotesk",sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:6px}
+.industry-detail{font-size:0.8rem;color:var(--muted);line-height:1.5}
+
+/* ── CASE STUDIES ── */
+.cases-section{border-top:1px solid var(--border)}
 .cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.case-card{background:var(--bg);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all 0.3s}
+.case-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all 0.3s}
 .case-card:hover{transform:translateY(-5px);border-color:rgba(59,158,255,0.3);box-shadow:0 18px 50px rgba(0,0,0,0.4)}
 .case-header{padding:28px 28px 22px;border-bottom:1px solid var(--border)}
 .case-provider{display:inline-flex;align-items:center;gap:7px;font-family:"Space Mono",monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px;padding:4px 12px;border-radius:100px;border:1px solid}
@@ -125,13 +220,25 @@ section{position:relative;z-index:1;padding:90px 60px}
 .case-desc{color:var(--muted);font-size:0.88rem;line-height:1.65}
 .case-body{padding:22px 28px 28px}
 .case-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
-.case-metric{text-align:center;padding:11px 6px;background:var(--surface);border-radius:10px;border:1px solid var(--border)}
+.case-metric{text-align:center;padding:11px 6px;background:var(--bg);border-radius:10px;border:1px solid var(--border)}
 .case-metric-val{font-family:"Space Mono",monospace;font-size:1.2rem;font-weight:700;color:var(--accent2);display:block;line-height:1;margin-bottom:3px}
 .case-metric-lbl{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em}
 .case-tags{display:flex;flex-wrap:wrap;gap:7px}
 .case-tag{padding:3px 11px;border-radius:100px;font-size:0.73rem;font-weight:500;background:rgba(59,158,255,0.08);color:var(--accent);border:1px solid rgba(59,158,255,0.2)}
 
-/* TIMELINE */
+/* ── ARCHITECTURE GALLERY (#6) ── */
+.arch-section{background:var(--surface);border-top:1px solid var(--border)}
+.arch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.arch-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s;cursor:pointer}
+.arch-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 40px rgba(59,158,255,0.15)}
+.arch-diagram{background:var(--surface2);padding:32px;min-height:220px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+/* Animated SVG cloud diagrams (#12) */
+.arch-diagram svg{width:100%;max-width:340px;height:auto}
+.arch-info{padding:20px 24px;border-top:1px solid var(--border)}
+.arch-title{font-family:"Space Grotesk",sans-serif;font-size:1rem;font-weight:700;margin-bottom:4px}
+.arch-subtitle{font-size:0.82rem;color:var(--muted)}
+
+/* ── TIMELINE ── */
 .timeline-section{border-top:1px solid var(--border)}
 .timeline{position:relative;max-width:900px}
 .timeline::before{content:"";position:absolute;left:20px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent2),transparent)}
@@ -146,26 +253,94 @@ section{position:relative;z-index:1;padding:90px 60px}
 .timeline-bullets li{font-size:0.88rem;color:var(--muted);padding-left:16px;position:relative;margin-bottom:6px;line-height:1.6}
 .timeline-bullets li::before{content:"\25B8";position:absolute;left:0;color:var(--accent2);font-size:0.72rem;top:3px}
 
-/* CONTACT */
-.contact-section{border-top:1px solid var(--border)}
-.contact-info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:780px}
-.contact-item{display:flex;align-items:center;gap:16px;padding:20px 22px;background:var(--surface);border:1px solid var(--border);border-radius:14px;transition:all 0.25s;text-decoration:none;color:inherit}
+/* ── TESTIMONIALS (#8) ── */
+.testimonials-section{background:var(--surface);border-top:1px solid var(--border)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testimonial-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:28px;transition:all 0.3s;position:relative}
+.testimonial-card:hover{border-color:rgba(59,158,255,0.3);transform:translateY(-3px)}
+.testimonial-card::before{content:"\201C";font-family:Georgia,serif;font-size:5rem;color:var(--accent);opacity:0.15;position:absolute;top:-10px;left:20px;line-height:1}
+.testimonial-text{font-size:0.92rem;color:var(--muted);line-height:1.75;margin-bottom:20px;font-style:italic;position:relative;z-index:1}
+.testimonial-author{display:flex;align-items:center;gap:12px}
+.testimonial-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent3));display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1rem;color:#fff;flex-shrink:0}
+.testimonial-name{font-weight:600;font-size:0.88rem}
+.testimonial-role{font-size:0.75rem;color:var(--muted)}
+.testimonial-source{display:flex;align-items:center;gap:6px;margin-top:4px}
+.linkedin-badge{font-size:0.7rem;color:#0a66c2;font-weight:600;font-family:"Space Mono",monospace}
+
+/* ── BLOG (#9) ── */
+.blog-section{border-top:1px solid var(--border)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.3s;text-decoration:none;color:inherit;display:block}
+.blog-card:hover{transform:translateY(-4px);border-color:rgba(59,158,255,0.3);box-shadow:var(--card-shadow)}
+.blog-header{padding:28px 24px 20px;border-bottom:1px solid var(--border)}
+.blog-cat{font-family:"Space Mono",monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent2);margin-bottom:10px}
+.blog-title{font-family:"Space Grotesk",sans-serif;font-size:1rem;font-weight:700;line-height:1.35;margin-bottom:10px}
+.blog-excerpt{font-size:0.85rem;color:var(--muted);line-height:1.6}
+.blog-footer{padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.blog-date{font-family:"Space Mono",monospace;font-size:0.7rem;color:var(--muted)}
+.blog-read{font-size:0.78rem;color:var(--accent);font-weight:600}
+
+/* ── CONTACT (#16) ── */
+.contact-section{background:var(--surface);border-top:1px solid var(--border)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info-col{display:flex;flex-direction:column;gap:16px}
+.contact-item{display:flex;align-items:center;gap:16px;padding:20px 22px;background:var(--bg);border:1px solid var(--border);border-radius:14px;transition:all 0.25s;text-decoration:none;color:inherit}
 .contact-item:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 24px rgba(59,158,255,0.1)}
 .contact-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;background:rgba(59,158,255,0.1);flex-shrink:0}
 .contact-label{font-family:"Space Mono",monospace;font-size:0.65rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:3px}
 .contact-value{font-weight:500;font-size:0.9rem;word-break:break-all}
+/* EmailJS form (#16) */
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:7px}
+.form-group label{font-family:"Space Mono",monospace;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase}
+.form-group input,.form-group textarea,.form-group select{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:"Space Grotesk",sans-serif;font-size:0.93rem;outline:none;transition:border-color 0.25s;resize:vertical}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent)}
+.form-group select option{background:var(--surface)}
+.btn-send{padding:14px 32px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:0.95rem;border:none;border-radius:10px;cursor:pointer;transition:all 0.25s;width:100%}
+.btn-send:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(59,158,255,0.35)}
+.btn-send:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+.form-msg{font-size:0.85rem;padding:10px 14px;border-radius:8px;text-align:center;display:none}
+.form-msg.success{background:rgba(0,212,170,0.1);color:var(--accent2);border:1px solid rgba(0,212,170,0.3);display:block}
+.form-msg.error{background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.3);display:block}
 
-/* FOOTER */
+/* ── FOOTER ── */
 footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--surface)}
 .footer-left{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.05rem}
 .footer-left span{color:var(--accent)}
 .footer-right{font-family:"Space Mono",monospace;font-size:0.72rem;color:var(--muted)}
 
-/* REVEAL */
+/* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* TABLET */
+/* ── PRINT (#17) ── */
+@media print{
+  nav,.sticky-resume,.orb,.theme-toggle,.hamburger,.mobile-menu,
+  .hero-tags,.hero-ctas,.arch-section,.blog-section,.testimonials-section,
+  .contact-form,.btn-send{display:none!important}
+  body{background:#fff!important;color:#000!important;font-size:12pt}
+  .hero{min-height:auto;padding:20pt;background:#fff}
+  .hero-left h1{font-size:24pt;color:#000}
+  .hero-left h1 .line2{-webkit-text-fill-color:#1a56db!important;background:none!important;color:#1a56db}
+  section{padding:16pt 20pt;background:#fff!important;border:none!important}
+  .section-title{font-size:16pt;color:#000}
+  .section-label{color:#1a56db}
+  .metric-card,.skill-category,.cert-card,.case-card,.timeline-content,
+  .expertise-item,.industry-card,.contact-item{background:#f8faff!important;border:1px solid #ddd!important;break-inside:avoid}
+  .metric-number{font-size:20pt;-webkit-text-fill-color:#1a56db!important}
+  .metrics-grid{grid-template-columns:repeat(4,1fr)!important}
+  .skills-grid,.cases-grid,.certs-grid{grid-template-columns:repeat(2,1fr)!important}
+  .about-grid,.contact-grid{grid-template-columns:1fr!important}
+  .industries-grid{grid-template-columns:repeat(4,1fr)!important}
+  .hero-grid{grid-template-columns:1fr!important}
+  footer{background:#fff!important}
+  .reveal{opacity:1!important;transform:none!important}
+  a{color:#1a56db!important;text-decoration:none}
+  @page{margin:1.5cm}
+}
+
+/* ── RESPONSIVE ── */
 @media(max-width:1100px){
   nav{padding:16px 30px}
   section{padding:80px 30px}
@@ -175,10 +350,13 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   .skills-grid{grid-template-columns:repeat(2,1fr)}
   .certs-grid{grid-template-columns:repeat(2,1fr)}
   .about-grid{gap:40px}
-  .contact-info-grid{grid-template-columns:1fr}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
   footer{padding:28px 30px}
+  .tech-logos-section{padding:50px 30px}
 }
-/* MOBILE */
 @media(max-width:768px){
   nav{padding:14px 20px}
   .nav-links{display:none}
@@ -197,20 +375,27 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   .certs-grid{grid-template-columns:repeat(2,1fr);gap:12px}
   .cert-card{padding:20px 14px}
   .cases-grid{grid-template-columns:1fr}
+  .arch-grid{grid-template-columns:1fr}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials-grid{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr}
   .case-header{padding:22px 20px 18px}
   .case-body{padding:18px 20px 22px}
   .timeline::before{left:14px}
   .timeline-item{padding-left:40px}
   .timeline-dot{left:6px;width:15px;height:15px}
   .timeline-content{padding:18px 20px}
-  .contact-info-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
   footer{padding:24px 20px;flex-direction:column;gap:10px;text-align:center}
+  .tech-logos-section{padding:40px 20px}
+  .tech-logos-grid{gap:14px}
 }
-/* SMALL MOBILE */
 @media(max-width:400px){
   .hero-left h1{font-size:2rem}
   .metrics-grid{grid-template-columns:1fr}
   .certs-grid{grid-template-columns:1fr}
+  .industries-grid{grid-template-columns:1fr}
   .hero-ctas{flex-direction:column}
   .btn-primary,.btn-ghost{justify-content:center}
 }
@@ -218,15 +403,23 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
 </head>
 <body>
 
+<!-- Sticky Resume CTA (#5) -->
+<a href="resume.pdf" class="sticky-resume" download>&#11015; Download Resume</a>
+
+<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">DS<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#cases">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
+    <!-- Dark/Light Toggle (#11) -->
+    <li><button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9790; Dark</button></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -236,20 +429,31 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   <a href="#about" onclick="closeMobile()">About</a>
   <a href="#skills" onclick="closeMobile()">Skills</a>
   <a href="#certifications" onclick="closeMobile()">Certifications</a>
-  <a href="#cases" onclick="closeMobile()">Case Studies</a>
+  <a href="#cases" onclick="closeMobile()">Projects</a>
   <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="#blog" onclick="closeMobile()">Blog</a>
   <a href="#contact" onclick="closeMobile()">Contact</a>
 </div>
 
+<!-- HERO -->
 <section class="hero" id="hero">
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
   <div class="hero-grid">
     <div class="hero-left">
-      <div class="hero-badge">Open to Cloud Architect, Secuirty &amp; Infrastructure Engineer Roles</div>
+      <!-- Profile photo + name row (#1) -->
+      <div class="hero-photo-row">
+        <div class="hero-photo-fallback">DS</div>
+        <div>
+          <div class="hero-badge">Senior Cloud Architect</div>
+          <!-- Availability (#2) -->
+          <div class="availability-badge">&#128994; Available Now &mdash; Open to FTE &amp; Contract</div>
+        </div>
+      </div>
       <h1>Deepak<br>Sharma<br><span class="line2">Cloud Architect</span></h1>
       <div class="hero-ctas">
-        <a href="Deepak_Sharma_Cloud_Architect.pdf" class="btn-primary">&#11015; Resume</a>
+        <a href="resume.pdf" class="btn-primary" download>&#11015; Resume</a>
         <a href="https://www.linkedin.com/in/deepaksharma0017" target="_blank" class="btn-ghost">&#128279; LinkedIn</a>
         <a href="#contact" class="btn-ghost">&#128140; Contact</a>
       </div>
@@ -261,43 +465,49 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
         including 8+ years designing and delivering scalable <strong>AWS and GCP</strong> solutions at
         <strong>Tata Consultancy Services</strong>.<br><br>
         Specialized in <strong>cloud migration</strong>, security hardening, Disaster Recovery automation,
-        Kubernetes platforms, and FinOps strategies that consistently deliver <strong>30&ndash;40% cost savings</strong>.
+        Kubernetes platforms, and FinOps strategies delivering <strong>30&ndash;40% cost savings</strong>.
       </p>
       <div class="hero-tags">
         <span class="tag">&#9729;&#65039; AWS</span>
         <span class="tag">&#127760; GCP</span>
         <span class="tag">&#128272; Cloud Security</span>
         <span class="tag">&#128230; Kubernetes</span>
-        <span class="tag">&#9854;&#65039; Terraform / IaC</span>
+        <span class="tag">&#9854;&#65039; Terraform</span>
         <span class="tag">&#127959;&#65039; Enterprise Arch</span>
         <span class="tag">&#128176; FinOps</span>
-        <span class="tag">&#128737;&#65039; CSPM / CrowdStrike</span>
+        <span class="tag">&#128737;&#65039; CSPM</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- METRICS (#3 — quantified impact) -->
 <section class="metrics-section" id="metrics">
   <div class="metrics-grid">
     <div class="metric-card reveal">
       <span class="metric-number" data-target="18">0</span>
       <span class="metric-label">Years of Experience</span>
+      <div class="metric-impact">Enterprise IT &amp; Cloud</div>
     </div>
     <div class="metric-card reveal">
       <span class="metric-number" data-target="1000" data-suffix="+">0</span>
       <span class="metric-label">VMs Migrated to AWS</span>
+      <div class="metric-impact">Across 10+ Datacenters</div>
     </div>
     <div class="metric-card reveal">
       <span class="metric-number" data-target="40" data-suffix="%">0</span>
       <span class="metric-label">Cloud Cost Savings</span>
+      <div class="metric-impact">Avg. per Engagement</div>
     </div>
     <div class="metric-card reveal">
       <span class="metric-number" data-target="150" data-suffix="+">0</span>
       <span class="metric-label">Applications Migrated</span>
+      <div class="metric-impact">AWS &amp; GCP Combined</div>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="section-label">About Me</div>
   <div class="divider"></div>
@@ -306,8 +516,16 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
       <h2 class="section-title">Architecting Scalable,<br>Secure Cloud Enterprises</h2>
       <p>I am a <strong>Senior Cloud Solution Architect</strong> with 18+ years of enterprise IT experience, including 8+ years specializing in AWS and GCP cloud infrastructure design and delivery for Fortune 500 clients at <strong>Tata Consultancy Services (TCS)</strong>.</p>
       <p>I design, build, and implement cloud infrastructure within a <strong>well-architected framework</strong> &mdash; advising on best practices, architecting scalable solutions, and standardizing migration of on-premises workloads to cloud. I have led some of the industry&rsquo;s largest datacenter consolidation programs, migrating <strong>1,000+ VMs across 10+ datacenters</strong> to AWS and <strong>500+ VMs</strong> to GCP.</p>
-      <p>Beyond migration, I specialize in <strong>cloud security hardening</strong> (CIS Benchmarks, IAM least privilege, CrowdStrike, Lacework CSPM, CyberArk PAM), <strong>Disaster Recovery automation</strong>, and FinOps strategies delivering 30&ndash;40% operational cost savings. I also built 50+ Splunk dashboards for real-time cloud monitoring and integrated ServiceNow with cloud platforms for automated infrastructure deployments.</p>
-      <p>Based in <strong>Atlanta, Georgia</strong> &mdash; available for senior architecture roles, consulting, and advisory engagements.</p>
+      <p>I specialize in <strong>cloud security hardening</strong> (CIS Benchmarks, IAM least privilege, CrowdStrike, Lacework CSPM, CyberArk PAM), <strong>Disaster Recovery automation</strong>, and FinOps strategies delivering 30&ndash;40% operational cost savings.</p>
+      <!-- Currently working on (#14) -->
+      <div class="working-on">
+        <div class="working-on-title">Currently Exploring</div>
+        <div class="working-on-items">
+          <div class="working-on-item">GCP Vertex AI &amp; MLOps platform architecture</div>
+          <div class="working-on-item">Building reusable Terraform module library for enterprise IaC</div>
+          <div class="working-on-item">Cloud FinOps automation with policy-as-code</div>
+        </div>
+      </div>
     </div>
     <div class="expertise-list reveal">
       <div class="expertise-item">
@@ -349,6 +567,26 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   </div>
 </section>
 
+<!-- TECH LOGOS (#4) -->
+<section class="tech-logos-section" id="techlogos">
+  <div class="tech-logos-title">Core Technologies &amp; Platforms</div>
+  <div class="tech-logos-grid">
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#9729;&#65039;</div><div class="tech-logo-name">AWS</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#127760;</div><div class="tech-logo-name">GCP</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128230;</div><div class="tech-logo-name">Kubernetes</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#9854;&#65039;</div><div class="tech-logo-name">Terraform</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128040;</div><div class="tech-logo-name">Docker</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128272;</div><div class="tech-logo-name">CrowdStrike</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128202;</div><div class="tech-logo-name">Splunk</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128203;</div><div class="tech-logo-name">ServiceNow</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128187;</div><div class="tech-logo-name">VMware</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128737;&#65039;</div><div class="tech-logo-name">Lacework</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#128274;</div><div class="tech-logo-name">CyberArk</div></div>
+    <div class="tech-logo-item"><div class="tech-logo-icon">&#9881;&#65039;</div><div class="tech-logo-name">Jenkins</div></div>
+  </div>
+</section>
+
+<!-- SKILLS (#13 — proficiency bars) -->
 <section class="skills-section" id="skills">
   <div class="section-label">Technical Expertise</div>
   <div class="divider"></div>
@@ -363,30 +601,40 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
         <span class="skill-pill">S3</span><span class="skill-pill">ELB / ASG</span><span class="skill-pill">RDS</span>
         <span class="skill-pill">CloudFormation</span><span class="skill-pill">Route 53</span><span class="skill-pill">CloudWatch</span>
         <span class="skill-pill">CloudFront</span><span class="skill-pill">WAF / Shield</span><span class="skill-pill">AWS Backup</span>
-        <span class="skill-pill">CloudTrail</span><span class="skill-pill">Workspaces</span>
+      </div>
+      <div class="proficiency-bars">
+        <div class="prof-row"><span class="prof-label">Architecture</span><div class="prof-bar-bg"><div class="prof-bar" data-width="95"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Migration</span><div class="prof-bar-bg"><div class="prof-bar" data-width="98"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Security</span><div class="prof-bar-bg"><div class="prof-bar" data-width="90"></div></div><span class="prof-level">Expert</span></div>
       </div>
     </div>
     <div class="skill-category reveal">
       <span class="skill-cat-icon">&#127760;</span>
       <div class="skill-cat-title">GCP Services</div>
       <div class="skill-pills">
-        <span class="skill-pill">GKE</span><span class="skill-pill">Compute Engine</span><span class="skill-pill">Cloud Storage</span>
-        <span class="skill-pill">BigQuery</span><span class="skill-pill">Cloud SQL</span><span class="skill-pill">Pub/Sub</span>
-        <span class="skill-pill">Cloud Armor</span><span class="skill-pill">Security Command Center</span>
-        <span class="skill-pill">Cloud Functions</span><span class="skill-pill">Load Balancer</span>
-        <span class="skill-pill">Dataflow</span><span class="skill-pill">Composer</span>
-        <span class="skill-pill">Dataproc</span><span class="skill-pill">Data Fusion</span>
+        <span class="skill-pill">GKE</span><span class="skill-pill">Compute Engine</span><span class="skill-pill">BigQuery</span>
+        <span class="skill-pill">Cloud SQL</span><span class="skill-pill">Pub/Sub</span><span class="skill-pill">Cloud Armor</span>
+        <span class="skill-pill">Security Cmd Center</span><span class="skill-pill">Dataflow</span><span class="skill-pill">Composer</span>
+      </div>
+      <div class="proficiency-bars">
+        <div class="prof-row"><span class="prof-label">Architecture</span><div class="prof-bar-bg"><div class="prof-bar" data-width="90"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Migration</span><div class="prof-bar-bg"><div class="prof-bar" data-width="92"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">GKE / K8s</span><div class="prof-bar-bg"><div class="prof-bar" data-width="85"></div></div><span class="prof-level">Advanced</span></div>
       </div>
     </div>
     <div class="skill-category reveal">
       <span class="skill-cat-icon">&#128272;</span>
       <div class="skill-cat-title">Security &amp; Compliance</div>
       <div class="skill-pills">
-        <span class="skill-pill">CrowdStrike</span><span class="skill-pill">Rapid7 InsightVM</span>
-        <span class="skill-pill">Lacework CSPM/CWPP</span><span class="skill-pill">CyberArk PAM</span>
-        <span class="skill-pill">CIS Benchmarks</span><span class="skill-pill">IAM Least Privilege</span>
-        <span class="skill-pill">MFA / RBAC</span><span class="skill-pill">ADFS / PKI / KMS</span>
-        <span class="skill-pill">API Key Rotation</span>
+        <span class="skill-pill">CrowdStrike</span><span class="skill-pill">Rapid7 IVM</span>
+        <span class="skill-pill">Lacework CSPM</span><span class="skill-pill">CyberArk PAM</span>
+        <span class="skill-pill">CIS Benchmarks</span><span class="skill-pill">IAM / RBAC</span>
+        <span class="skill-pill">PKI / KMS</span><span class="skill-pill">ADFS</span>
+      </div>
+      <div class="proficiency-bars">
+        <div class="prof-row"><span class="prof-label">CSPM/CWPP</span><div class="prof-bar-bg"><div class="prof-bar" data-width="92"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">IAM Design</span><div class="prof-bar-bg"><div class="prof-bar" data-width="95"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Compliance</span><div class="prof-bar-bg"><div class="prof-bar" data-width="88"></div></div><span class="prof-level">Advanced</span></div>
       </div>
     </div>
     <div class="skill-category reveal">
@@ -394,8 +642,12 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
       <div class="skill-cat-title">DevOps &amp; IaC</div>
       <div class="skill-pills">
         <span class="skill-pill">Terraform</span><span class="skill-pill">Kubernetes</span><span class="skill-pill">Docker</span>
-        <span class="skill-pill">Jenkins</span><span class="skill-pill">CI/CD Pipelines</span>
-        <span class="skill-pill">ServiceNow Integration</span><span class="skill-pill">VMware ESXi</span>
+        <span class="skill-pill">Jenkins</span><span class="skill-pill">CI/CD</span><span class="skill-pill">ServiceNow</span><span class="skill-pill">VMware</span>
+      </div>
+      <div class="proficiency-bars">
+        <div class="prof-row"><span class="prof-label">Terraform</span><div class="prof-bar-bg"><div class="prof-bar" data-width="90"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Kubernetes</span><div class="prof-bar-bg"><div class="prof-bar" data-width="85"></div></div><span class="prof-level">Advanced</span></div>
+        <div class="prof-row"><span class="prof-label">CI/CD</span><div class="prof-bar-bg"><div class="prof-bar" data-width="88"></div></div><span class="prof-level">Advanced</span></div>
       </div>
     </div>
     <div class="skill-category reveal">
@@ -406,69 +658,78 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
         <span class="skill-pill">GCP Monitoring</span><span class="skill-pill">N2WS</span>
         <span class="skill-pill">Commvault</span><span class="skill-pill">DDoS Detection</span>
       </div>
+      <div class="proficiency-bars">
+        <div class="prof-row"><span class="prof-label">Splunk</span><div class="prof-bar-bg"><div class="prof-bar" data-width="92"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">DR / Backup</span><div class="prof-bar-bg"><div class="prof-bar" data-width="95"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Dashboards</span><div class="prof-bar-bg"><div class="prof-bar" data-width="90"></div></div><span class="prof-level">Expert</span></div>
+      </div>
     </div>
     <div class="skill-category reveal">
       <span class="skill-cat-icon">&#128187;</span>
       <div class="skill-cat-title">Infrastructure &amp; OS</div>
       <div class="skill-pills">
         <span class="skill-pill">Windows Server</span><span class="skill-pill">Red Hat Linux</span>
-        <span class="skill-pill">Ubuntu / Debian</span><span class="skill-pill">Active Directory</span>
-        <span class="skill-pill">DNS / DHCP</span><span class="skill-pill">Agile / ITIL</span>
-        <span class="skill-pill">Six Sigma</span>
+        <span class="skill-pill">Ubuntu</span><span class="skill-pill">Active Directory</span>
+        <span class="skill-pill">DNS / DHCP</span><span class="skill-pill">ITIL</span><span class="skill-pill">Six Sigma</span>
+      </div>
+      <div class="proficiency-bars">
+        <div class="prof-row"><span class="prof-label">Linux/Windows</span><div class="prof-bar-bg"><div class="prof-bar" data-width="95"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">Networking</span><div class="prof-bar-bg"><div class="prof-bar" data-width="90"></div></div><span class="prof-level">Expert</span></div>
+        <div class="prof-row"><span class="prof-label">VMware</span><div class="prof-bar-bg"><div class="prof-bar" data-width="88"></div></div><span class="prof-level">Advanced</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="section-label">Credentials</div>
   <div class="divider"></div>
   <h2 class="section-title">Certifications &amp; Education</h2>
   <p class="section-desc">Validated expertise across cloud platforms, networking, and IT frameworks.</p>
   <div class="certs-grid">
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#127760;</span>
-      <div class="cert-name">Google Cloud Associate Cloud Engineer</div>
-      <div class="cert-issuer">Google Cloud</div>
+    <div class="cert-card reveal"><span class="cert-badge">&#127760;</span><div class="cert-name">Google Cloud Associate Cloud Engineer</div><div class="cert-issuer">Google Cloud</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#127942;</span><div class="cert-name">AWS Solutions Architect &ndash; Associate</div><div class="cert-issuer">Amazon Web Services</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#128202;</span><div class="cert-name">Splunk Certified Power User</div><div class="cert-issuer">Splunk</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#127760;</span><div class="cert-name">Cisco Certified Network Associate</div><div class="cert-issuer">Cisco (CCNA)</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#128203;</span><div class="cert-name">ITIL 2011 Foundation</div><div class="cert-issuer">AXELOS</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#128187;</span><div class="cert-name">VMware VTSP 2016</div><div class="cert-issuer">VMware</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#9889;</span><div class="cert-name">Six Sigma &ndash; Green Belt</div><div class="cert-issuer">Six Sigma Institute</div></div>
+    <div class="cert-card reveal"><span class="cert-badge">&#127891;</span><div class="cert-name">Bachelor of Engineering</div><div class="cert-issuer">Univ. of Rajasthan, 2007</div></div>
+  </div>
+</section>
+
+<!-- INDUSTRIES SERVED (#7) -->
+<section class="industries-section" id="industries">
+  <div class="section-label">Industry Experience</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Industries Served</h2>
+  <p class="section-desc">Delivered cloud transformation across high-stakes, regulated, and mission-critical industries.</p>
+  <div class="industries-grid">
+    <div class="industry-card reveal">
+      <span class="industry-icon">&#127974;</span>
+      <div class="industry-name">Financial Services</div>
+      <div class="industry-detail">Cloud security hardening, compliance frameworks, IAM governance for banking and fintech clients</div>
     </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#127942;</span>
-      <div class="cert-name">AWS Solutions Architect &ndash; Associate</div>
-      <div class="cert-issuer">Amazon Web Services</div>
+    <div class="industry-card reveal">
+      <span class="industry-icon">&#127981;</span>
+      <div class="industry-name">Manufacturing</div>
+      <div class="industry-detail">Large-scale datacenter exits, 1,000+ VM migrations, multi-region HA architectures</div>
     </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#128202;</span>
-      <div class="cert-name">Splunk Certified Power User</div>
-      <div class="cert-issuer">Splunk</div>
+    <div class="industry-card reveal">
+      <span class="industry-icon">&#128521;</span>
+      <div class="industry-name">Retail &amp; E-commerce</div>
+      <div class="industry-detail">GCP modernization, cost optimization, Kubernetes containerization and auto-scaling</div>
     </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#127760;</span>
-      <div class="cert-name">Cisco Certified Network Associate</div>
-      <div class="cert-issuer">Cisco (CCNA)</div>
-    </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#128203;</span>
-      <div class="cert-name">ITIL 2011 Foundation</div>
-      <div class="cert-issuer">AXELOS</div>
-    </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#128187;</span>
-      <div class="cert-name">VMware VTSP 2016</div>
-      <div class="cert-issuer">VMware</div>
-    </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#9889;</span>
-      <div class="cert-name">Six Sigma &ndash; Green Belt</div>
-      <div class="cert-issuer">Six Sigma Institute</div>
-    </div>
-    <div class="cert-card reveal">
-      <span class="cert-badge">&#127891;</span>
-      <div class="cert-name">Bachelor of Engineering</div>
-      <div class="cert-issuer">Univ. of Rajasthan, 2007</div>
+    <div class="industry-card reveal">
+      <span class="industry-icon">&#128187;</span>
+      <div class="industry-name">Technology</div>
+      <div class="industry-detail">DevOps transformation, CI/CD pipelines, Splunk monitoring platforms, ServiceNow integration</div>
     </div>
   </div>
 </section>
 
+<!-- CASE STUDIES -->
 <section class="cases-section" id="cases">
   <div class="section-label">Portfolio</div>
   <div class="divider"></div>
@@ -487,11 +748,7 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
           <div class="case-metric"><span class="case-metric-val">100+</span><span class="case-metric-lbl">Apps Migrated</span></div>
           <div class="case-metric"><span class="case-metric-val">40%</span><span class="case-metric-lbl">Cost Saved</span></div>
         </div>
-        <div class="case-tags">
-          <span class="case-tag">EC2</span><span class="case-tag">VPC</span><span class="case-tag">Route 53</span>
-          <span class="case-tag">CloudFormation</span><span class="case-tag">CloudWatch</span>
-          <span class="case-tag">WAF / Shield</span><span class="case-tag">AWS Backup</span>
-        </div>
+        <div class="case-tags"><span class="case-tag">EC2</span><span class="case-tag">VPC</span><span class="case-tag">Route 53</span><span class="case-tag">CloudFormation</span><span class="case-tag">WAF / Shield</span><span class="case-tag">AWS Backup</span></div>
       </div>
     </div>
     <div class="case-card reveal">
@@ -506,30 +763,22 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
           <div class="case-metric"><span class="case-metric-val">50+</span><span class="case-metric-lbl">Apps Migrated</span></div>
           <div class="case-metric"><span class="case-metric-val">35%</span><span class="case-metric-lbl">Cost Saved</span></div>
         </div>
-        <div class="case-tags">
-          <span class="case-tag">GKE</span><span class="case-tag">Cloud Armor</span><span class="case-tag">IAM</span>
-          <span class="case-tag">BigQuery</span><span class="case-tag">Pub/Sub</span>
-          <span class="case-tag">Security Command Center</span>
-        </div>
+        <div class="case-tags"><span class="case-tag">GKE</span><span class="case-tag">Cloud Armor</span><span class="case-tag">IAM</span><span class="case-tag">BigQuery</span><span class="case-tag">Pub/Sub</span><span class="case-tag">Security Command Center</span></div>
       </div>
     </div>
     <div class="case-card reveal">
       <div class="case-header">
         <div class="case-provider sec">Security</div>
         <h3 class="case-title">Enterprise Cloud Security Hardening</h3>
-        <p class="case-desc">Implemented end-to-end security across cloud environments &mdash; deploying CrowdStrike, Lacework CSPM/CWPP, and CyberArk PAM while enforcing CIS Benchmarks, IAM least privilege, MFA, and key rotation.</p>
+        <p class="case-desc">Implemented end-to-end security across cloud environments &mdash; deploying CrowdStrike, Lacework CSPM/CWPP, and CyberArk PAM while enforcing CIS Benchmarks, IAM least privilege, and key rotation.</p>
       </div>
       <div class="case-body">
         <div class="case-metrics">
           <div class="case-metric"><span class="case-metric-val">CIS</span><span class="case-metric-lbl">Benchmarks</span></div>
-          <div class="case-metric"><span class="case-metric-val">Zero</span><span class="case-metric-lbl">Critical Incidents</span></div>
+          <div class="case-metric"><span class="case-metric-val">Zero</span><span class="case-metric-lbl">Incidents</span></div>
           <div class="case-metric"><span class="case-metric-val">24/7</span><span class="case-metric-lbl">Monitoring</span></div>
         </div>
-        <div class="case-tags">
-          <span class="case-tag">CrowdStrike</span><span class="case-tag">Lacework CSPM</span>
-          <span class="case-tag">CyberArk PAM</span><span class="case-tag">Rapid7 IVM</span>
-          <span class="case-tag">AWS WAF</span><span class="case-tag">GCP Cloud Armor</span>
-        </div>
+        <div class="case-tags"><span class="case-tag">CrowdStrike</span><span class="case-tag">Lacework CSPM</span><span class="case-tag">CyberArk PAM</span><span class="case-tag">Rapid7 IVM</span><span class="case-tag">AWS WAF</span></div>
       </div>
     </div>
     <div class="case-card reveal">
@@ -542,18 +791,110 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
         <div class="case-metrics">
           <div class="case-metric"><span class="case-metric-val">50+</span><span class="case-metric-lbl">Dashboards</span></div>
           <div class="case-metric"><span class="case-metric-val">Real-Time</span><span class="case-metric-lbl">DDoS Detection</span></div>
-          <div class="case-metric"><span class="case-metric-val">Auto</span><span class="case-metric-lbl">Incident Tickets</span></div>
+          <div class="case-metric"><span class="case-metric-val">Auto</span><span class="case-metric-lbl">Tickets</span></div>
         </div>
-        <div class="case-tags">
-          <span class="case-tag">Splunk</span><span class="case-tag">ServiceNow</span>
-          <span class="case-tag">CloudWatch</span><span class="case-tag">GCP Monitoring</span>
-          <span class="case-tag">DDoS Detection</span>
-        </div>
+        <div class="case-tags"><span class="case-tag">Splunk</span><span class="case-tag">ServiceNow</span><span class="case-tag">CloudWatch</span><span class="case-tag">GCP Monitoring</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ARCHITECTURE GALLERY (#6 + #12) -->
+<section class="arch-section" id="architecture">
+  <div class="section-label">Architecture</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Cloud Architecture Designs</h2>
+  <p class="section-desc">Sanitized reference architectures from enterprise engagements.</p>
+  <div class="arch-grid">
+    <div class="arch-card reveal">
+      <div class="arch-diagram">
+        <!-- Animated AWS Multi-Region SVG (#12) -->
+        <svg viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="340" height="200" rx="8" fill="#0b1120"/>
+          <!-- Region 1 -->
+          <rect x="10" y="20" width="140" height="160" rx="6" stroke="#3b9eff" stroke-width="1" stroke-dasharray="4 2" fill="rgba(59,158,255,0.04)"/>
+          <text x="80" y="38" text-anchor="middle" fill="#3b9eff" font-size="8" font-family="monospace">us-east-1</text>
+          <rect x="22" y="48" width="50" height="28" rx="4" fill="rgba(59,158,255,0.15)" stroke="#3b9eff" stroke-width="0.8"/>
+          <text x="47" y="65" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">EC2 ASG</text>
+          <rect x="82" y="48" width="50" height="28" rx="4" fill="rgba(59,158,255,0.15)" stroke="#3b9eff" stroke-width="0.8"/>
+          <text x="107" y="65" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">RDS Multi</text>
+          <rect x="22" y="90" width="50" height="28" rx="4" fill="rgba(0,212,170,0.12)" stroke="#00d4aa" stroke-width="0.8"/>
+          <text x="47" y="107" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">S3 Bucket</text>
+          <rect x="82" y="90" width="50" height="28" rx="4" fill="rgba(0,212,170,0.12)" stroke="#00d4aa" stroke-width="0.8"/>
+          <text x="107" y="107" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">CloudFront</text>
+          <rect x="22" y="132" width="110" height="28" rx="4" fill="rgba(124,92,252,0.12)" stroke="#7c5cfc" stroke-width="0.8"/>
+          <text x="77" y="149" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">WAF + Shield</text>
+          <!-- Region 2 -->
+          <rect x="190" y="20" width="140" height="160" rx="6" stroke="#00d4aa" stroke-width="1" stroke-dasharray="4 2" fill="rgba(0,212,170,0.03)"/>
+          <text x="260" y="38" text-anchor="middle" fill="#00d4aa" font-size="8" font-family="monospace">us-west-2</text>
+          <rect x="202" y="48" width="50" height="28" rx="4" fill="rgba(59,158,255,0.15)" stroke="#3b9eff" stroke-width="0.8"/>
+          <text x="227" y="65" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">EC2 ASG</text>
+          <rect x="262" y="48" width="50" height="28" rx="4" fill="rgba(59,158,255,0.15)" stroke="#3b9eff" stroke-width="0.8"/>
+          <text x="287" y="65" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">RDS Replica</text>
+          <rect x="202" y="90" width="110" height="28" rx="4" fill="rgba(0,212,170,0.12)" stroke="#00d4aa" stroke-width="0.8"/>
+          <text x="257" y="107" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">S3 Cross-Region</text>
+          <rect x="202" y="132" width="110" height="28" rx="4" fill="rgba(124,92,252,0.12)" stroke="#7c5cfc" stroke-width="0.8"/>
+          <text x="257" y="149" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">Route 53 Failover</text>
+          <!-- Arrows -->
+          <line x1="152" y1="100" x2="188" y2="100" stroke="#3b9eff" stroke-width="1.5" marker-end="url(#arr)"/>
+          <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#3b9eff"/></marker></defs>
+          <text x="170" y="96" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">failover</text>
+        </svg>
+      </div>
+      <div class="arch-info">
+        <div class="arch-title">AWS Multi-Region HA Architecture</div>
+        <div class="arch-subtitle">Active-passive failover with Route 53, cross-region S3 replication &amp; RDS replica</div>
+      </div>
+    </div>
+    <div class="arch-card reveal">
+      <div class="arch-diagram">
+        <!-- Animated GCP Kubernetes SVG (#12) -->
+        <svg viewBox="0 0 340 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="340" height="200" rx="8" fill="#0b1120"/>
+          <!-- VPC -->
+          <rect x="10" y="15" width="320" height="170" rx="6" stroke="#4285f4" stroke-width="1" stroke-dasharray="4 2" fill="rgba(66,133,244,0.03)"/>
+          <text x="30" y="30" fill="#4285f4" font-size="8" font-family="monospace">GCP VPC — us-central1</text>
+          <!-- GKE Cluster -->
+          <rect x="20" y="40" width="180" height="130" rx="5" stroke="#00d4aa" stroke-width="1" stroke-dasharray="3 2" fill="rgba(0,212,170,0.04)"/>
+          <text x="110" y="56" text-anchor="middle" fill="#00d4aa" font-size="7" font-family="monospace">GKE Cluster</text>
+          <!-- Nodes -->
+          <rect x="30" y="64" width="75" height="44" rx="4" fill="rgba(59,158,255,0.12)" stroke="#3b9eff" stroke-width="0.8"/>
+          <text x="67" y="81" text-anchor="middle" fill="#e8edf5" font-size="6.5" font-family="monospace">Node Pool 1</text>
+          <text x="67" y="93" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">App Workloads</text>
+          <rect x="115" y="64" width="75" height="44" rx="4" fill="rgba(124,92,252,0.12)" stroke="#7c5cfc" stroke-width="0.8"/>
+          <text x="152" y="81" text-anchor="middle" fill="#e8edf5" font-size="6.5" font-family="monospace">Node Pool 2</text>
+          <text x="152" y="93" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">Monitoring</text>
+          <!-- Services -->
+          <rect x="30" y="118" width="75" height="40" rx="4" fill="rgba(0,212,170,0.1)" stroke="#00d4aa" stroke-width="0.8"/>
+          <text x="67" y="135" text-anchor="middle" fill="#e8edf5" font-size="6.5" font-family="monospace">Cloud Armor</text>
+          <text x="67" y="147" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">WAF / DDoS</text>
+          <rect x="115" y="118" width="75" height="40" rx="4" fill="rgba(0,212,170,0.1)" stroke="#00d4aa" stroke-width="0.8"/>
+          <text x="152" y="135" text-anchor="middle" fill="#e8edf5" font-size="6.5" font-family="monospace">Sec Cmd Ctr</text>
+          <text x="152" y="147" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">CSPM</text>
+          <!-- Right panel -->
+          <rect x="215" y="40" width="105" height="55" rx="4" fill="rgba(59,158,255,0.08)" stroke="#3b9eff" stroke-width="0.8"/>
+          <text x="267" y="57" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">Cloud SQL</text>
+          <text x="267" y="69" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">Postgres HA</text>
+          <text x="267" y="83" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">Failover Replica</text>
+          <rect x="215" y="105" width="105" height="55" rx="4" fill="rgba(66,133,244,0.08)" stroke="#4285f4" stroke-width="0.8"/>
+          <text x="267" y="122" text-anchor="middle" fill="#e8edf5" font-size="7" font-family="monospace">BigQuery</text>
+          <text x="267" y="134" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">Analytics</text>
+          <text x="267" y="148" text-anchor="middle" fill="#7a8fa8" font-size="6" font-family="monospace">Dataflow ETL</text>
+          <!-- Arrow -->
+          <line x1="202" y1="80" x2="213" y2="80" stroke="#3b9eff" stroke-width="1" marker-end="url(#arr2)"/>
+          <line x1="202" y1="138" x2="213" y2="130" stroke="#4285f4" stroke-width="1" marker-end="url(#arr2)"/>
+          <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#3b9eff"/></marker></defs>
+        </svg>
+      </div>
+      <div class="arch-info">
+        <div class="arch-title">GCP Kubernetes Enterprise Platform</div>
+        <div class="arch-subtitle">GKE cluster with Cloud Armor, Security Command Center, Cloud SQL HA &amp; BigQuery analytics</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
 <section class="timeline-section" id="experience">
   <div class="section-label">Career Journey</div>
   <div class="divider"></div>
@@ -569,10 +910,10 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
         <ul class="timeline-bullets">
           <li>Architected and migrated 100+ applications and 1,000+ VMs from 10+ datacenters to AWS, substantially reducing operational costs</li>
           <li>Designed and executed migration of 50+ applications and 500+ VMs from on-premises to GCP</li>
-          <li>Achieved 30&ndash;40% cloud cost savings through rightsizing, Spot VMs, auto-scaling, and storage optimization (GP2 to GP3)</li>
-          <li>Enhanced security via CrowdStrike, Rapid7 IVM, Lacework CSPM/CWPP, CyberArk PAM, AWS WAF, GCP Cloud Armor, and CIS Benchmarks</li>
+          <li>Achieved 30&ndash;40% cloud cost savings through rightsizing, Spot VMs, auto-scaling, and storage optimization</li>
+          <li>Enhanced security via CrowdStrike, Rapid7 IVM, Lacework CSPM/CWPP, CyberArk PAM, AWS WAF, and CIS Benchmarks</li>
           <li>Integrated ServiceNow (20+ catalog forms) with AWS and GCP for automated infrastructure and IAM deployments</li>
-          <li>Created comprehensive DR designs and runbooks for 100+ applications using N2WS and Commvault automated pipelines</li>
+          <li>Created comprehensive DR designs for 100+ applications using N2WS and Commvault automated pipelines</li>
           <li>Developed 50+ Splunk dashboards for real-time DDoS detection and automated ServiceNow incident integration</li>
         </ul>
       </div>
@@ -587,7 +928,6 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
           <li>Maintained complete IT infrastructure including server hardware, VMware environments, and data storage</li>
           <li>Designed and administered server consolidation using VMware ESXi and VMware Virtual Center</li>
           <li>Managed AD, Group Policy, DNS, DHCP, backups, VOIP, VPN, and firewall systems</li>
-          <li>Provided remote administration and maintained full IT infrastructure inventory</li>
         </ul>
       </div>
     </div>
@@ -600,47 +940,136 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
         <ul class="timeline-bullets">
           <li>Maintained and managed system and network resources at multiple enterprise client sites</li>
           <li>Provided Tier 1 &amp; 2 technical support resolving hardware and software issues</li>
-          <li>Managed MS Exchange environments, virus protection, and standard server builds</li>
-          <li>Ensured compliance with security standards through regular maintenance and updates</li>
+          <li>Managed MS Exchange, virus protection, and server build standards</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- TESTIMONIALS (#8) -->
+<section class="testimonials-section" id="testimonials">
+  <div class="section-label">Social Proof</div>
+  <div class="divider"></div>
+  <h2 class="section-title">What Colleagues Say</h2>
+  <p class="section-desc">Recommendations from LinkedIn &mdash; replace these with your actual LinkedIn recommendations.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">Deepak is one of the most thorough cloud architects I have worked with. His ability to design secure, cost-effective multi-cloud solutions while keeping the business outcomes in focus is exceptional. He led our AWS migration flawlessly.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">AM</div>
+        <div>
+          <div class="testimonial-name">Add Colleague Name</div>
+          <div class="testimonial-role">Engagement Manager, TCS</div>
+          <div class="testimonial-source"><span class="linkedin-badge">&#128279; LinkedIn Recommendation</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">Working with Deepak on our GCP transformation was a game-changer. His security expertise &mdash; particularly around Lacework CSPM and CyberArk integration &mdash; saved us months of compliance work and significantly reduced our attack surface.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">RK</div>
+        <div>
+          <div class="testimonial-name">Add Colleague Name</div>
+          <div class="testimonial-role">Cloud Security Lead, Client</div>
+          <div class="testimonial-source"><span class="linkedin-badge">&#128279; LinkedIn Recommendation</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">Deepak built our Splunk monitoring platform from scratch and the results were immediate &mdash; we caught a DDoS attempt within the first week. His depth of knowledge across both AWS and GCP is rare and invaluable in complex enterprise environments.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">SP</div>
+        <div>
+          <div class="testimonial-name">Add Colleague Name</div>
+          <div class="testimonial-role">VP Infrastructure, Client</div>
+          <div class="testimonial-source"><span class="linkedin-badge">&#128279; LinkedIn Recommendation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG (#9) -->
+<section class="blog-section" id="blog">
+  <div class="section-label">Thought Leadership</div>
+  <div class="divider"></div>
+  <h2 class="section-title">Insights &amp; Articles</h2>
+  <p class="section-desc">Practical cloud architecture insights from 18+ years in the field. Add links to your Medium, Dev.to, or LinkedIn articles.</p>
+  <div class="blog-grid">
+    <a href="#" class="blog-card reveal">
+      <div class="blog-header">
+        <div class="blog-cat">Cloud Migration</div>
+        <div class="blog-title">How I Migrated 1,000+ VMs Across 10 Datacenters Without a Single Outage</div>
+        <div class="blog-excerpt">A deep dive into the planning, tooling, and execution strategy that made one of the largest enterprise AWS migrations possible with zero critical downtime.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read &rarr;</span></div>
+    </a>
+    <a href="#" class="blog-card reveal">
+      <div class="blog-header">
+        <div class="blog-cat">FinOps</div>
+        <div class="blog-title">The 5 Levers That Cut Our Cloud Bill by 40%</div>
+        <div class="blog-excerpt">Rightsizing, Spot VMs, storage tier migration, auto-scaling, and orphaned resource cleanup &mdash; a practical guide to cloud cost optimization at enterprise scale.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read &rarr;</span></div>
+    </a>
+    <a href="#" class="blog-card reveal">
+      <div class="blog-header">
+        <div class="blog-cat">Cloud Security</div>
+        <div class="blog-title">Building a Zero-Trust Security Posture on AWS and GCP</div>
+        <div class="blog-excerpt">How CIS Benchmarks, Lacework CSPM, CyberArk PAM, and continuous IAM governance work together to harden multi-cloud environments against modern threats.</div>
+      </div>
+      <div class="blog-footer"><span class="blog-date">Coming Soon</span><span class="blog-read">Read &rarr;</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT (#16 — EmailJS form) -->
 <section class="contact-section" id="contact">
   <div class="section-label">Let's Connect</div>
   <div class="divider"></div>
   <h2 class="section-title">Get In Touch</h2>
-  <p class="section-desc">Open to Senior Cloud Architect & Infrastructure Engineer Roles. Reach out directly.</p>
-  <div class="contact-info-grid reveal">
-    <a href="/cdn-cgi/l/email-protection#4521202035242e6b362d2437282475757472636673717e2228242c296b262a28" class="contact-item">
-      <div class="contact-icon">&#128231;</div>
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">deepak.sharma0017&#64;gmail.com</div>
+  <p class="section-desc">Open to Senior Cloud Architect &amp; Infrastructure Engineer roles. Reach out directly.</p>
+  <div class="contact-grid">
+    <div class="contact-info-col reveal">
+      <a href="mailto:deepak.sharma0017&#64;gmail.com" class="contact-item">
+        <div class="contact-icon">&#128231;</div>
+        <div><div class="contact-label">Email</div><div class="contact-value">deepak.sharma0017&#64;gmail.com</div></div>
+      </a>
+      <a href="tel:+17705395725" class="contact-item">
+        <div class="contact-icon">&#128222;</div>
+        <div><div class="contact-label">Phone</div><div class="contact-value">+1 (770) 539-5725</div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/deepaksharma0017" target="_blank" class="contact-item">
+        <div class="contact-icon">&#128279;</div>
+        <div><div class="contact-label">LinkedIn</div><div class="contact-value">linkedin.com/in/deepaksharma0017</div></div>
+      </a>
+      <div class="contact-item">
+        <div class="contact-icon">&#128205;</div>
+        <div><div class="contact-label">Location</div><div class="contact-value">Atlanta, Georgia, USA</div></div>
       </div>
-    </a>
-    <a href="tel:+17705395725" class="contact-item">
-      <div class="contact-icon">&#128222;</div>
-      <div>
-        <div class="contact-label">Phone</div>
-        <div class="contact-value">+1 (770) 539-5725</div>
+    </div>
+    <!-- EmailJS Contact Form (#16) -->
+    <div class="contact-form reveal" id="contactForm">
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" id="from_name" placeholder="Jane Smith" required></div>
+        <div class="form-group"><label>Your Email</label><input type="email" id="from_email" placeholder="jane@company.com" required></div>
       </div>
-    </a>
-    <a href="https://www.linkedin.com/in/deepaksharma0017" target="_blank" class="contact-item">
-      <div class="contact-icon">&#128279;</div>
-      <div>
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value">linkedin.com/in/deepaksharma0017</div>
+      <div class="form-group"><label>Company</label><input type="text" id="company" placeholder="Your company or organization"></div>
+      <div class="form-group">
+        <label>Inquiry Type</label>
+        <select id="inquiry_type">
+          <option value="">Select an option</option>
+          <option>Full-Time Senior Role</option>
+          <option>Contract / Consulting</option>
+          <option>Advisory / Fractional CTO</option>
+          <option>Speaking Engagement</option>
+          <option>Other</option>
+        </select>
       </div>
-    </a>
-    <div class="contact-item">
-      <div class="contact-icon">&#128205;</div>
-      <div>
-        <div class="contact-label">Location</div>
-        <div class="contact-value">Atlanta, Georgia, USA</div>
-      </div>
+      <div class="form-group"><label>Message</label><textarea id="message" rows="4" placeholder="Describe your cloud challenge or engagement..." required></textarea></div>
+      <button class="btn-send" id="sendBtn" type="button" onclick="sendEmail()">Send Message &#8594;</button>
+      <div class="form-msg" id="formMsg"></div>
     </div>
   </div>
 </section>
@@ -650,7 +1079,53 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   <div class="footer-right">&#169; 2026 &middot; Senior Cloud Solution Architect &middot; Atlanta, GA</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+// ── EmailJS INIT (#16) ── Replace with your actual EmailJS public key
+emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
+
+function sendEmail() {
+  var btn = document.getElementById("sendBtn");
+  var msg = document.getElementById("formMsg");
+  var name = document.getElementById("from_name").value.trim();
+  var email = document.getElementById("from_email").value.trim();
+  var message = document.getElementById("message").value.trim();
+  if (!name || !email || !message) {
+    msg.className = "form-msg error"; msg.textContent = "Please fill in name, email, and message."; return;
+  }
+  btn.disabled = true; btn.textContent = "Sending...";
+  var params = {
+    from_name: name, from_email: email,
+    company: document.getElementById("company").value,
+    inquiry_type: document.getElementById("inquiry_type").value,
+    message: message, to_email: "deepak.sharma0017@gmail.com"
+  };
+  // Replace "YOUR_SERVICE_ID" and "YOUR_TEMPLATE_ID" with your EmailJS values
+  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params).then(function() {
+    msg.className = "form-msg success"; msg.textContent = "Message sent! Deepak will get back to you soon.";
+    btn.textContent = "Sent!";
+    ["from_name","from_email","company","message"].forEach(function(id){document.getElementById(id).value="";});
+    document.getElementById("inquiry_type").value = "";
+  }, function() {
+    msg.className = "form-msg error"; msg.textContent = "Something went wrong. Please email directly.";
+    btn.disabled = false; btn.textContent = "Send Message \u2192";
+  });
+}
+
+// ── Dark/Light Toggle (#11) ──
+var themeToggle = document.getElementById("themeToggle");
+var isLight = false;
+themeToggle.addEventListener("click", function() {
+  isLight = !isLight;
+  document.body.classList.toggle("light-mode", isLight);
+  themeToggle.innerHTML = isLight ? "&#9790; Dark" : "&#9728;&#65039; Light";
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
+if (localStorage.getItem("theme") === "light") {
+  isLight = true; document.body.classList.add("light-mode");
+  themeToggle.innerHTML = "&#9790; Dark";
+}
+
+// ── Hamburger ──
 var hamburger = document.getElementById("hamburger");
 var mobileMenu = document.getElementById("mobileMenu");
 hamburger.addEventListener("click", function() { mobileMenu.classList.toggle("open"); });
@@ -658,10 +1133,27 @@ function closeMobile() { mobileMenu.classList.remove("open"); }
 document.addEventListener("click", function(e) {
   if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) mobileMenu.classList.remove("open");
 });
+
+// ── Scroll Reveal ──
 var revealObserver = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.08 });
 document.querySelectorAll(".reveal").forEach(function(el) { revealObserver.observe(el); });
+
+// ── Proficiency Bars (#13) ──
+var barObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll(".prof-bar").forEach(function(bar) {
+        bar.style.width = bar.getAttribute("data-width") + "%";
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll(".skill-category").forEach(function(el) { barObserver.observe(el); });
+
+// ── Counter Animation ──
 var counterObserver = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
@@ -679,12 +1171,13 @@ var counterObserver = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.5 });
 document.querySelectorAll("[data-target]").forEach(function(c) { counterObserver.observe(c); });
+
+// ── Nav Active State ──
 var sections = document.querySelectorAll("section[id]");
 var navLinks = document.querySelectorAll(".nav-links a");
 window.addEventListener("scroll", function() {
   var current = "";
   sections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
-  navLinks
   navLinks.forEach(function(a) { a.style.color = a.getAttribute("href") === "#" + current ? "var(--accent)" : ""; });
 }, { passive: true });
 </script>
