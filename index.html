@@ -87,10 +87,10 @@ body.light-mode .mobile-menu{background:rgba(240,244,248,0.99)}
 
 /* Profile photo (#1) */
 .hero-left{display:flex;flex-direction:column}
-.hero-photo-row{display:flex;align-items:center;gap:24px;margin-bottom:24px;animation:fadeUp 0.6s ease both}
-.hero-photo{width:90px;height:90px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 6px rgba(59,158,255,0.12);object-fit:cover;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:2rem;flex-shrink:0;overflow:hidden}
+
+.hero-photo{width:160px;height:160px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 8px rgba(59,158,255,0.12);object-fit:cover;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:2rem;overflow:hidden;margin-bottom:24px}
 .hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
-.hero-photo-fallback{width:90px;height:90px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 6px rgba(59,158,255,0.12);background:linear-gradient(135deg,var(--accent),var(--accent3));display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-size:1.8rem;font-weight:700;color:#fff;flex-shrink:0}
+.hero-photo-fallback{width:160px;height:160px;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 8px rgba(59,158,255,0.12);background:linear-gradient(135deg,var(--accent),var(--accent3));display:flex;align-items:center;justify-content:center;font-family:"Space Grotesk",sans-serif;font-size:3rem;font-weight:700;color:#fff;margin-bottom:24px}
 
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,158,255,0.1);border:1px solid rgba(59,158,255,0.25);color:var(--accent);font-family:"Space Mono",monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:16px;animation:fadeUp 0.6s ease both}
 .hero-badge::before{content:"";width:6px;height:6px;background:var(--accent2);border-radius:50%;animation:pulse 2s infinite;flex-shrink:0}
@@ -443,14 +443,10 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   <div class="hero-grid">
     <div class="hero-left">
       <!-- Profile photo + name row (#1) -->
-      <div class="hero-photo-row">
-        <img src="profile.jpg" alt="Deepak Sharma" class="hero-photo">
-        <div>
-          <div class="hero-badge">Senior Cloud Architect</div>
-          <!-- Availability (#2) -->
-          <div class="availability-badge">&#128994; Available Now &mdash; Open to FTE &amp; Contract</div>
-        </div>
-      </div>
+      <img src="profile.jpg" alt="Deepak Sharma" class="hero-photo">
+      <div class="hero-badge">Senior Cloud Architect</div>
+      <!-- Availability (#2) -->
+      <div class="availability-badge">&#128994; Available Now &mdash; Open to FTE &amp; Contract</div>
       <h1>Deepak<br>Sharma<br><span class="line2">Cloud Architect</span></h1>
       <div class="hero-ctas">
         <a href="Deepak_Sharma_Cloud_Architect.pdf" class="btn-primary" download>&#11015; Resume</a>
@@ -1032,7 +1028,7 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   <p class="section-desc">Open to Senior Cloud Architect &amp; Infrastructure Engineer roles. Reach out directly.</p>
   <div class="contact-grid">
     <div class="contact-info-col reveal">
-      <a href="mailto:deepak.sharma0017&#64;gmail.com" class="contact-item">
+      <a href="/cdn-cgi/l/email-protection#bfdbdadacfded491ccd7decdd2de8f8f8e88999c898b84d8d2ded6d391dcd0d2" class="contact-item">
         <div class="contact-icon">&#128231;</div>
         <div><div class="contact-label">Email</div><div class="contact-value">deepak.sharma0017&#64;gmail.com</div></div>
       </a>
@@ -1079,7 +1075,7 @@ footer{position:relative;z-index:1;padding:32px 60px;border-top:1px solid var(--
   <div class="footer-right">&#169; 2026 &middot; Senior Cloud Solution Architect &middot; Atlanta, GA</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── EmailJS INIT (#16) ── Replace with your actual EmailJS public key
 emailjs.init("YOUR_EMAILJS_PUBLIC_KEY");
 
@@ -1178,6 +1174,7 @@ var navLinks = document.querySelectorAll(".nav-links a");
 window.addEventListener("scroll", function() {
   var current = "";
   sections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  na
   navLinks.forEach(function(a) { a.style.color = a.getAttribute("href") === "#" + current ? "var(--accent)" : ""; });
 }, { passive: true });
 </script>
